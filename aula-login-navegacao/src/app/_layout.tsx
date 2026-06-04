@@ -7,7 +7,7 @@ export default function Layout() {
       <Stack.Screen name="index" options={{ headerShown: false }} />
       
       {/* home é a tela principal após o login */}
-      <Stack.Screen name="home" options={{ title: 'Página Inicial' }} />
+      <Stack.Screen name="HomeScreen" options={{ title: 'Página Inicial' }} />
     </Stack>
   );
 }

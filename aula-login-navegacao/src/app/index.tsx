@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image } from 'react-native';
 import { useRouter } from 'expo-router';
+import MyInput from '../components/MyInput';
 
 export default function LoginScreen() {
   const [nome, setNome] = useState('');
+    const [senha, setSenha] = useState('');
+
   
   // Instanciando o roteador do Expo
   const router = useRouter();
@@ -23,8 +26,18 @@ export default function LoginScreen() {
         style={styles.logo} 
       />
       <Text style={styles.titulo}>Bem-vindo!</Text>
-
-      <TextInput
+<MyInput
+placeholder='olá'
+value={nome}
+onChangeText={setNome}
+/>
+<MyInput
+placeholder='Digite sua senha'
+value={senha}
+onChangeText={setSenha}
+isPassword={true}
+/>
+      {/* <TextInput
         style={styles.input}
         placeholder="Digite seu nome"
         value={nome}
@@ -35,7 +48,9 @@ export default function LoginScreen() {
         style={styles.input}
         placeholder="Digite sua senha"
         secureTextEntry={true}
-      />
+      /> */}
+
+
 
       <TouchableOpacity style={styles.botao} onPress={handleLogin}>
         <Text style={styles.textoBotao}>ENTRAR</Text>
