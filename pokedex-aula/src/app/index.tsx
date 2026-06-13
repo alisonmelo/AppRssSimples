@@ -59,6 +59,6 @@ return (
 const styles = StyleSheet.create({
   container: { flex:1, backgroundColor: '#ebebeb', padding:10},
   center: {flex:1, justifyContent: 'center', alignItems: 'center', gap:12},
-  card: {backgroundColor:'#fff', padding:20, borderRadius:8, elevation:2},
+  card: {backgroundColor:'#fff', padding:20, borderRadius:8, elevation:2, margin:8},
   nome:{fontSize: 10, fontWeight: 'bold', color:'#333'}
 })
